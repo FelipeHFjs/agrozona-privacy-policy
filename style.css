@@ -11,7 +11,7 @@ body {
   color: #333;
   background-color: #f8f9fa;
   padding: 20px;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -26,6 +26,17 @@ h1 {
   padding-bottom: 1rem;
 }
 
+/* Section headers */
+h2 {
+  color: #2c5530;
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  border-left: 4px solid #4a7c59;
+  padding-left: 1rem;
+}
+
 /* Content container */
 .content {
   background-color: white;
@@ -35,25 +46,67 @@ h1 {
   margin-bottom: 2rem;
 }
 
+/* Last updated date */
+.last-updated {
+  background-color: #f8f9fa;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #e9ecef;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem !important;
+  text-align: center;
+  color: #666;
+}
+
 /* Paragraph styling */
 p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
   text-align: justify;
   color: #444;
 }
 
-/* Contact information styling */
-p:last-child {
+/* List styling */
+ul {
+  margin-bottom: 1.2rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+li strong {
+  color: #2c5530;
+}
+
+/* Contact section styling */
+.contact-section {
   background-color: #e8f5e8;
-  padding: 1rem;
+  padding: 1.5rem;
   border-left: 4px solid #4a7c59;
   border-radius: 5px;
-  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.contact-section p {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #2c5530;
+}
+
+.contact-section ul {
   margin-bottom: 0;
 }
 
-/* Email link styling */
+.contact-section li {
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+/* Email and link styling */
 a {
   color: #2c5530;
   text-decoration: none;
@@ -63,6 +116,12 @@ a {
 a:hover {
   color: #4a7c59;
   text-decoration: underline;
+}
+
+/* Emphasis styling */
+strong {
+  color: #2c5530;
+  font-weight: 600;
 }
 
 /* Responsive design */
@@ -76,11 +135,47 @@ a:hover {
     margin-bottom: 1.5rem;
   }
 
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+
   .content {
     padding: 1.5rem;
   }
 
-  p {
-    font-size: 1rem;
+  p,
+  li {
+    font-size: 0.95rem;
+  }
+
+  .contact-section {
+    padding: 1rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .content {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+
+  h1 {
+    border-bottom: 2px solid #333;
+  }
+
+  h2 {
+    border-left: 3px solid #333;
+  }
+
+  a {
+    color: #333;
+    text-decoration: underline;
   }
 }
